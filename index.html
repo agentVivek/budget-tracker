@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <button id="themeToggle" class="theme-btn">🌓 Toggle Theme</button>
+    <h1>Budget Tracker</h1>
+    <div class="balance-box">
+      <h3>Your Balance</h3>
+      <p id="balance">$0.00</p>
+    </div>
+    <div class="summary">
+      <div class="income">
+        <h4>Income</h4>
+        <p id="income">$0.00</p>
+      </div>
+      <div class="expense">
+        <h4>Expense</h4>
+        <p id="expense">$0.00</p>
+      </div>
+    </div>
+    <h3>Spending Overview</h3>
+    <canvas id="chart"></canvas>
+    <h3>History</h3>
+    <ul id="transactions"></ul>
+    <h3>Add Transaction</h3>
+    <form id="transactionForm">
+      <input type="text" id="description" placeholder="Description" required>
+      <input type="number" id="amount" placeholder="Amount" required>
+      <div class="type">
+        <label><input type="radio" name="type" value="income" checked> Income</label>
+        <label><input type="radio" name="type" value="expense"> Expense</label>
+      </div>
+      <button type="submit">Add Transaction</button>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

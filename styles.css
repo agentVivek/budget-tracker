@@ -1,0 +1,114 @@
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #333;
+  --box-bg: #fff;
+  --income-bg: #e8f5e9;
+  --expense-bg: #ffebee;
+}
+
+.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #fff;
+  --box-bg: #2d2d2d;
+  --income-bg: #2e7d32;
+  --expense-bg: #c62828;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 40px 20px 20px;
+  background: var(--box-bg);
+  border-radius: 10px;
+  position: relative;
+}
+
+.balance-box {
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.summary {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.income, .expense {
+  flex: 1;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.income { background: var(--income-bg); }
+.expense { background: var(--expense-bg); }
+
+#transactions {
+  list-style: none;
+  margin: 20px 0;
+}
+
+#transactions li {
+  background: var(--box-bg);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+.theme-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 12px;
+  background: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#chart {
+  margin: 20px 0;
+  max-height: 250px;
+}
